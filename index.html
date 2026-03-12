@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dream Job - Web Developer</title>
+<meta name="description" content="A fun website for kids to learn about web development and what web developers do. Discover why coding is creative and how to get started with HTML, CSS, and JavaScript!">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>My Dream Job: Web Developer</h1>
+    
+</header>
+
+<nav class="nav-buttons" role="tablist" aria-label="Content sections">
+    <button class="nav-btn active" role="tab" aria-selected="true" aria-controls="dash1" id="tab1" onclick="showDashboard('dash1', this)">What is Web Dev?</button>
+    <button class="nav-btn" role="tab" aria-selected="false" aria-controls="dash2" id="tab2" onclick="showDashboard('dash2', this)">Why I Love It</button>
+    <button class="nav-btn" role="tab" aria-selected="false" aria-controls="dash3" id="tab3" onclick="showDashboard('dash3', this)">How to Start</button>
+    <button class="nav-btn" role="tab" aria-selected="false" aria-controls="dash4" id="tab4" onclick="showDashboard('dash4', this)">Game Quiz</button>
+</nav>
+
+<main>
+    <!-- Section 1: What is Web Development -->
+    <section id="dash1" class="dashboard active" role="tabpanel" aria-labelledby="tab1">
+        <h2>What Does a Web Developer Do?</h2>
+        <div class="kid-cards">
+            <div class="kid-card">
+                <h3>Build</h3>
+                <p>Web developers build websites you can click, read, and play on.</p>
+            </div>
+            <div class="kid-card">
+                <h3>Design</h3>
+                <p>They choose colors, buttons, and layouts so the website looks great.</p>
+            </div>
+            <div class="kid-card">
+                <h3>Make it work</h3>
+                <p>They make games, forms, and fun actions happen when you tap!</p>
+            </div>
+        </div>
+
+        <div class="tip">
+            <strong>Kid tip:</strong> A website is like a digital playground. Web developers build the playground!
+        </div>
+    </section>
+
+    <!-- Section 2: Why I Love It -->
+    <section id="dash2" class="dashboard" role="tabpanel" aria-labelledby="tab2">
+        <h2>Why I Love This Job</h2>
+        <p>I love this job because it is creative. You can invent your own ideas and turn them into a real website.</p>
+        <p>It feels awesome when you share your website with friends and family!</p>
+        <div class="badge-row" aria-label="Web developer superpowers">
+            <span class="badge">Creativity</span>
+            <span class="badge">Problem Solving</span>
+            <span class="badge">Teamwork</span>
+        </div>
+    </section>
+
+    <!-- Section 3: How to Start -->
+    <section id="dash3" class="dashboard" role="tabpanel" aria-labelledby="tab3">
+        <h2>How Can You Become a Web Developer?</h2>
+        <p>Start with <strong>HTML</strong> and <strong>CSS</strong>, then learn <strong>JavaScript</strong>.</p>
+        
+        <h3>Why Should I Start with HTML and CSS?</h3>
+        <p><strong>HTML</strong> is like the structure of a house: the walls and rooms. It is the foundation.</p>
+        
+        <h3>What About CSS?</h3>
+        <p><strong>CSS</strong> is like paint and decorations. It makes your website look nice and colorful.</p>
+        
+        <h3>After You Finish HTML and CSS, What's Next?</h3>
+        <p>Next: <strong>JavaScript</strong>!</p>
+        
+        <h3>Why JavaScript?</h3>
+        <p><strong>JavaScript</strong> is like electricity. It makes your website move and do cool things!</p>
+
+        <div class="mini-checklist" aria-label="Learning checklist">
+            <h3>Your Learning Checklist</h3>
+            <label class="check-item"><input type="checkbox"> I learned what HTML does</label>
+            <label class="check-item"><input type="checkbox"> I learned what CSS does</label>
+            <label class="check-item"><input type="checkbox"> I learned what JavaScript does</label>
+        </div>
+    </section>
+
+    <!-- Section 4: Quiz -->
+    <section id="dash4" class="dashboard" role="tabpanel" aria-labelledby="tab4">
+        <h2>Quick Quiz Game</h2>
+        <p>Pick an answer. Get stars for correct answers!</p>
+
+        <div class="stars" aria-label="Star score">
+            <span class="star" id="star1" aria-hidden="true">★</span>
+            <span class="star" id="star2" aria-hidden="true">★</span>
+            <span class="star" id="star3" aria-hidden="true">★</span>
+            <span class="star" id="star4" aria-hidden="true">★</span>
+            <span class="star" id="star5" aria-hidden="true">★</span>
+            <span class="star-text" id="starText">0 / 5</span>
+        </div>
+
+        <div class="quiz" id="quiz">
+            <div class="question" id="questionText">Loading...</div>
+            <div class="choices" id="choices"></div>
+            <div class="quiz-feedback" id="feedback" aria-live="polite"></div>
+            <div class="quiz-actions">
+                <button class="small-btn" type="button" onclick="nextQuestion()">Next</button>
+                <button class="small-btn secondary" type="button" onclick="restartQuiz()">Restart</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
