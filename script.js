@@ -1,18 +1,18 @@
-// Function to switch between content sections when a tab button is clicked
-// Switch between sections (tabs) // The buttons
+
+
 function showDashboard(dashboardId, button) {
-    // Hide all dashboards
+    
     const allDashboards = document.querySelectorAll('.dashboard');
     allDashboards.forEach((dash) => dash.classList.remove('active'));
 
-    // Remove active state from all buttons
+   
     const allButtons = document.querySelectorAll('.nav-btn');
     allButtons.forEach((btn) => {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
     });
 
-    // Show the selected dashboard
+    
     const targetDashboard = document.getElementById(dashboardId);
     if (targetDashboard) targetDashboard.classList.add('active');
 
@@ -22,13 +22,13 @@ function showDashboard(dashboardId, button) {
         button.setAttribute('aria-selected', 'true');
     }
 
-    // If the quiz tab is opened, make sure quiz is ready
+   
     if (dashboardId === 'dash4') ensureQuizReady();
 }
 
-// -------------------------
-// Kid-friendly Quiz Game
-// -------------------------
+
+
+
 const quizQuestions = [
     { q: "What does HTML do?", choices: ["It adds colors", "It makes the structure", "It makes sound effects"], answerIndex: 1 },
     { q: "What does CSS do?", choices: ["It decorates the website", "It cooks pasta", "It builds robots"], answerIndex: 0 },
@@ -124,7 +124,7 @@ function restartQuiz() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // If the user opens quiz later, showDashboard calls ensureQuizReady()
-    // But we can also initialize safely here.
+   
+    
     ensureQuizReady();
 });
